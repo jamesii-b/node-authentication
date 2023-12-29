@@ -71,6 +71,11 @@ app.get('/', checkAuthenticated, (req, res) => {
     //{name: req.user.name}
 })
 
+app.get('/test',(req,res)=>{
+    res.send("test")
+})
+
+
 app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render("login.ejs")
 })
